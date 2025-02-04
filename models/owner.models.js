@@ -66,4 +66,4 @@ ownerSchema.methods.Comparepasswords = async function(PlainTextPassword){
 
 const Owner = mongoose.model("owner",ownerSchema);
 
-module.exports = User;
+module.exports = Owner;
