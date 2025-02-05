@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      h1,h2,h3{
+            text-shadow: 2px 2px 2px oklch(0.62 0.21 259.12) ;
+        }
+      .box{
+        box-shadow: 17px 20px 46px #004aff;
+      }
+
+      input{
+        box-shadow: 7px 6px 6px oklch(0.62 0.21 259.12);
+      }
+      .loginDiv > *{
+        text-shadow: -2px -2px 2px oklch(0.62 0.21 259.12) ;
+      }
+      @media screen and (orientation:portrait) {
+        .loginDiv > *{
+        text-shadow: 5px 5px 3px oklch(0.62 0.21 259.12);
+      }
+      }
+    </style>
+</head>
+<body>
+    <div class="main w-full min-h-screen h-screen overflow-auto bg-blue-400 flex justify-center items-center font-sans">
+        <div class="box bg-zinc-800 flex flex-col items-center rounded-lg overflow-hidden h-full w-full lg:flex-row lg:w-[75%] lg:h-[75%] lg:border-2 lg:border-blue-500">
+            <div class="box1 w-full h-[50%] flex  bg-zinc-300 relative flex-col gap-2 items-center  lg:w-[50%] lg:h-full lg:justify-center lg:relative">
+                <div class="w-[400px] h-[400px] bg-blue-500 rounded-full absolute top-[-100px] right-[-120px]"></div>
+                <h1 class="text-3xl font-bold text-white absolute top-5 z-1 lg:left-5">Welcome to Scatch</h1>
+                <h2 class="text-xl font-bold text-white absolute top-15 z-1 lg:left-10">Buy Bags, Buy Happiness</h2>
+                <h3 class="text-lg  font-bold z-1 absolute top-[45%] text-white lg:static lg:mt-25">Create Account</h3>
+                <form action="" method="post" class="flex flex-col gap-5  absolute z-2 top-[60%] w-[50%] h-[70%] lg:w-auto lg:h-[500px] lg:static">
+                    <input type="text" name="Fullname" placeholder="Fullname" id="Fullname" class="outline-none bg-zinc-200 p-2 rounded-md lg:w-auto lg:h-auto" required>
+                    <input type="text" name="username" placeholder="Username" id="username" class="outline-none bg-zinc-200 p-2 rounded-md lg:w-auto lg:h-auto" required>
+                    <input type="email" name="email" placeholder="Email" id="email" class="outline-none bg-zinc-200 p-2 rounded-md lg:w-auto lg:h-auto" required>
+                    <input type="password" placeholder="Password" name="password" id="password" class="outline-none bg-zinc-200 p-2 rounded-md" required>
+                    <input type="tel" placeholder="Contact" name="contact" id="contact" class="outline-none bg-zinc-200 p-2 rounded-md" required>
+                    <input type="submit" value="Create Account" class="outline-none bg-zinc-200 p-2 rounded-lg text-lg font-bold cursor-pointer">
+                </form>
+                <div class="w-[200px] h-[200px] bg-blue-500 rounded-full absolute bottom-[-50px] left-[-60px] "></div>
+            </div>
+            <div class="w-full h-[50%] bg-blue-500 overflow-hidden relative flex items-end p-5 lg:w-[50%] lg:h-full lg:flex-col lg:justify-center">
+                <div class="w-[200px] h-[200px] bg-white rounded-full absolute top-[-150px] left-[-60px] lg:w-[400px] lg:h-[400px] lg:top-[-100px] lg:left-[-280px]"></div>
+             <div class=" loginDiv flex gap-2 items-center relative lg:w-full lg:h-20 lg:flex-col lg:items-center ">
+              <h1 class="text-md font-bold text-white z-2 lg:relative lg:text-3xl
+              ">Already Have an Account?</h1>
+              <a class="text-white text-md font-bold z-2 hover:text-blue-200 " href="">LogIN</a>
+             </div>
+                <div class="w-[300px] h-[300px] bg-white rounded-full absolute bottom-[-100px] right-[-120px]"></div>
+            </div>
+        </div>
+      </div>
+</body>
+</html>

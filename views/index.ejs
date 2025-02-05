@@ -9,27 +9,43 @@
       h1,h2,h3{
             text-shadow: 2px 2px 2px oklch(0.62 0.21 259.12) ;
         }
-      
+      .box{
+        box-shadow: 17px 20px 46px #004aff;
+      }
+
+      input{
+        box-shadow: 7px 6px 6px oklch(0.62 0.21 259.12);
+      }
+      .box2 > h1{
+        text-shadow: -2px -2px 2px oklch(0.62 0.21 259.12);
+      }
+
+      @media screen and (orientation:portrait) {
+        .box2 > h1{
+        text-shadow: 5px 5px 3px oklch(0.62 0.21 259.12);
+      }
+      }
     </style>
 </head>
 <body>
-    <div class="main w-full min-h-screen h-screen overflow-auto bg-zinc-950 flex justify-center items-center font-sans">
-        <div class="box bg-zinc-800 flex flex-col items-center rounded-lg overflow-hidden h-full w-full lg:flex-row ">
-            <div class="box1 w-full h-[50%] flex justify-center bg-zinc-300 flex-col gap-5 overflow-hidden items-center relative lg:w-[50%] lg:h-full ">
+    <div class="main w-full min-h-screen h-screen overflow-auto bg-blue-400 flex justify-center items-center font-sans">
+        <div class="box bg-zinc-800 flex flex-col items-center rounded-lg overflow-hidden h-full w-full lg:flex-row lg:w-[75%] lg:h-[75%] lg:border-2 lg:border-blue-500">
+            <div class="box1 w-full h-[50%] flex  bg-zinc-300 flex-col gap-2 items-center relative lg:w-[50%] lg:h-full lg:justify-center">
                 <div class="w-[400px] h-[400px] bg-blue-500 rounded-full absolute top-[-100px] right-[-120px]"></div>
                 <h1 class="text-3xl font-bold text-white absolute top-5 z-1 lg:left-5">Welcome to Scatch</h1>
                 <h2 class="text-xl font-bold text-white absolute top-15 z-1 lg:left-10">Buy Bags, Buy Happiness</h2>
-                <h3 class="text-lg mb-5 font-bold z-1 text-white">Please LogIn</h3>
-                <form action="" method="post" class="flex flex-col gap-5 z-1 w-[70%] h-[70%] lg:w-auto lg:h-auto ">
-                    <input type="text" name="username" placeholder="Username" id="username" class="outline-none bg-zinc-200 p-2 rounded-md w-[70%] h-[10%] lg:w-auto lg:h-auto">
+                <h3 class="text-lg mb-2 font-bold z-1 absolute top-[45%] text-white lg:static">Please LogIn</h3>
+                <form action="" method="post" class="flex flex-col gap-5  absolute z-2 top-[60%] w-[50%] h-[70%] lg:w-auto lg:h-auto lg:static">
+                    <input type="text" name="username" placeholder="Username" id="username" class="outline-none bg-zinc-200 p-2 rounded-md lg:w-auto lg:h-auto">
                     <input type="password" placeholder="Password" name="password" id="password" class="outline-none bg-zinc-200 p-2 rounded-md">
                     <input type="submit" value="LogIn" class="outline-none bg-zinc-200 p-2 rounded-lg text-lg font-bold cursor-pointer">
                 </form>
                 <div class="w-[200px] h-[200px] bg-blue-500 rounded-full absolute bottom-[-50px] left-[-60px] "></div>
             </div>
-            <div class="w-full h-[50%] bg-blue-500 overflow-hidden relative flex justify-center lg:w-[50%] lg:h-full lg:flex-col lg:items-center">
+            <div class="box2 w-full h-[50%] bg-blue-500 overflow-hidden relative flex items-center p-5 lg:w-[50%] lg:h-full lg:flex-col lg:justify-center">
                 <div class="w-[200px] h-[200px] bg-white rounded-full absolute top-[-150px] left-[-60px] lg:w-[400px] lg:h-[400px] lg:top-[-100px] lg:left-[-280px]"></div>
-                <h1 class="text-3xl font-bold text-white absolute z-1 mt-5 ">Don't Have an Account?</h1>
+                <h1 class="text-3xl font-bold text-white absolute top-[40%] z-2 lg:static">Don't Have an Account?</h1>
+                <a class="text-white text-lg font-bold mt-5 hover:text-blue-200" href="">Create account?</a>
                 <div class="w-[300px] h-[300px] bg-white rounded-full absolute bottom-[-100px] right-[-120px]"></div>
             </div>
         </div>

@@ -43,13 +43,14 @@ const ownerSchema = mongoose.Schema({
         }
     },
     picture:{
-        type:String
+        type:String,
+        default:"/images/defaultProfilePic.jpeg"
     }
 }, { timestamps: true });
 
 
 ownerSchema.pre("save",async function Hashpassword(next) {
-    if(!this.isModified(this.password)){
+    if(!this.isModified("password")){
         return next();
     }
     let salt = await bcrypt.genSalt(10);
